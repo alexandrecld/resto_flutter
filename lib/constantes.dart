@@ -43,3 +43,8 @@ List<Event> events = [
   Event(name: "Anniversaire", path: birthdayImage),
   Event(name: "Autre", path: cupcakeImage),
 ];
+
+String aboutMe =
+    "Ne vous fiez pas aux apparences, sous son air sauvage, le codeur est un fin gourmet. \n Avec ses doigts agiles il saura vous préparer des logiciels succulents.";
+
+

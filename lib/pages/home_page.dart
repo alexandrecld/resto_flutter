@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mon_restaurant/models/make_it_responsive.dart';
+import 'package:mon_restaurant/sections/about_me_section.dart';
 import 'package:mon_restaurant/sections/event_section.dart';
 import 'package:mon_restaurant/sections/top_stack.dart';
 import 'package:mon_restaurant/widgets/drawer_small.dart';
@@ -28,6 +29,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             TopStack(),
             EventSection(),
+            AboutMe(),
           ],
         ),
       ),
