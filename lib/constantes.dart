@@ -29,7 +29,7 @@ Color pinkColor = const Color.fromRGBO(255, 182, 193, 1);
 
 // gestion des liens du menu appbar
 List<ButtonObject> menuButton = [
-  ButtonObject(text: "MaCuisine", destination: HomePage()),
+  ButtonObject(text: "Ma Cuisine", destination: HomePage()),
   ButtonObject(text: "Mes recettes", destination: NextPage()),
   ButtonObject(text: "Blog", destination: NextPage()),
 ];
