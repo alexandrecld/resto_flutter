@@ -15,12 +15,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.of(context).size;
     ScreenSize screenSize = MakeItResponsive().getScreenSize(context);
 
     return Scaffold(
-      appBar: (screenSize == ScreenSize.small) ? PhoneBar() : WebBar(size: size),
+      appBar:
+          (screenSize == ScreenSize.small) ? PhoneBar() : WebBar(size: size),
       drawer: const DrawerSmall(),
       body: const SingleChildScrollView(
         child: Column(

@@ -34,4 +34,5 @@ List<ButtonObject> menuButton = [
   ButtonObject(text: "Blog", destination: NextPage()),
 ];
 
-List<HoverButton> menuButtonHover() => menuButton.map((button) => HoverButton(buttonObject: button)).toList();
+List<HoverButton> menuButtonHover() =>
+    menuButton.map((button) => HoverButton(buttonObject: button)).toList();

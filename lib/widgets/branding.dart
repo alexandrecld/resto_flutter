@@ -9,13 +9,15 @@ class Branding extends StatelessWidget {
     return Row(
       children: [
         Image.asset(cupcakelogo, width: 40, height: 40),
-        const Text(
-          "La cuisine du CFA",
-          style: TextStyle(
-              color: Colors.red,
-              fontWeight: FontWeight.w900,
-              fontSize: 30,
-              fontStyle: FontStyle.italic),
+        const Flexible(
+          child: Text(
+            "La cuisine du CFA",
+            style: TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.w900,
+                fontSize: 30,
+                fontStyle: FontStyle.italic),
+          ),
         ),
       ],
     );

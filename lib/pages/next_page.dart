@@ -12,8 +12,8 @@ class NextPage extends StatelessWidget {
       body: const Center(
         child: Text(
           "Page suivante",
-          ),
         ),
-      );
+      ),
+    );
   }
 }

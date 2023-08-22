@@ -13,10 +13,7 @@ class ContainerTextImage extends StatelessWidget {
       width: size.width,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: Image.asset(homeImage).image,
-              fit: BoxFit.cover
-          )
-      ),
+              image: Image.asset(homeImage).image, fit: BoxFit.cover)),
       child: const Center(
         child: Padding(
           padding: EdgeInsets.only(left: 50, right: 50),
