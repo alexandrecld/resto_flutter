@@ -1,9 +1,11 @@
 // définir les alias d'images
 import 'package:flutter/material.dart';
 import 'package:mon_restaurant/models/event.dart';
+import 'package:mon_restaurant/models/url_class.dart';
 import 'package:mon_restaurant/pages/home_page.dart';
 import 'package:mon_restaurant/pages/next_page.dart';
 import 'package:mon_restaurant/widgets/hover_button.dart';
+import 'package:mon_restaurant/widgets/url_button.dart';
 import 'models/button_object.dart';
 
 String birthdayImage = "images/bday.jpg";
@@ -85,3 +87,12 @@ List<FloatingActionButton> getFloatingButton(BuildContext context) =>
           ),
         )
         .toList();
+
+List<UrlClass> networks = [
+  UrlClass(name: "Facebook", url: "https://www.facebook.com/"),
+  UrlClass(name: "Instagram", url: "https://www.instagram.com/"),
+  UrlClass(name: "Twitter", url: "https://www.twitter.com/"),
+];
+
+List<UrlButton> getSocialButtons() =>
+    networks.map((net) => UrlButton(urlClass: net)).toList();
