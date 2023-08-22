@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mon_restaurant/models/make_it_responsive.dart';
 import 'package:mon_restaurant/sections/top_stack.dart';
+import 'package:mon_restaurant/widgets/phone_bar.dart';
 import 'package:mon_restaurant/widgets/web_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,9 +16,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     Size size = MediaQuery.of(context).size;
+    ScreenSize screenSize = MakeItResponsive().getScreenSize(context);
 
     return Scaffold(
-      appBar: WebBar(size: size),
+      appBar: (screenSize == ScreenSize.small) ? PhoneBar() : WebBar(size: size),
       body: const SingleChildScrollView(
         child: Column(
           children: [
@@ -27,16 +30,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-/*
-Center(
-child: Text(
-"Vive la cuisine",
-textAlign: TextAlign.center,
-style: TextStyle(
-fontSize: 25,
-fontWeight: FontWeight.w700,
-),
-),
-),
-*/
