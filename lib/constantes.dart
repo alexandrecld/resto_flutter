@@ -1,5 +1,6 @@
 // définir les alias d'images
 import 'dart:ui';
+import 'package:mon_restaurant/models/event.dart';
 import 'package:mon_restaurant/pages/home_page.dart';
 import 'package:mon_restaurant/pages/next_page.dart';
 import 'package:mon_restaurant/widgets/hover_button.dart';
@@ -36,3 +37,9 @@ List<ButtonObject> menuButton = [
 
 List<HoverButton> menuButtonHover() =>
     menuButton.map((button) => HoverButton(buttonObject: button)).toList();
+
+List<Event> events = [
+  Event(name: "Mariage", path: weddingImage),
+  Event(name: "Anniversaire", path: birthdayImage),
+  Event(name: "Autre", path: cupcakeImage),
+];

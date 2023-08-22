@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mon_restaurant/models/make_it_responsive.dart';
 import 'package:mon_restaurant/widgets/title_text.dart';
 
+import '../constantes.dart';
 import '../widgets/event_widget.dart';
 
 class EventSection extends StatelessWidget {
@@ -21,7 +22,7 @@ class EventSection extends StatelessWidget {
           Row(
             children: [
               TitleText(
-                label: "Évènement",
+                label: "Évènements",
                 fSize: 30,
               ),
               Expanded(child: Container()),
@@ -44,8 +45,8 @@ class EventSection extends StatelessWidget {
     return (small)
         ? Column(children: widgets)
         : Row(
-            children: widgets,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: widgets,
           );
   }
 }
