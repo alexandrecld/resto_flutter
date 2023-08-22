@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mon_restaurant/models/make_it_responsive.dart';
 import 'package:mon_restaurant/sections/top_stack.dart';
+import 'package:mon_restaurant/widgets/drawer_small.dart';
 import 'package:mon_restaurant/widgets/phone_bar.dart';
 import 'package:mon_restaurant/widgets/web_bar.dart';
 
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: (screenSize == ScreenSize.small) ? PhoneBar() : WebBar(size: size),
+      drawer: const DrawerSmall(),
       body: const SingleChildScrollView(
         child: Column(
           children: [
