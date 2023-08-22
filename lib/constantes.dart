@@ -1,5 +1,5 @@
 // définir les alias d'images
-import 'dart:ui';
+import 'package:flutter/material.dart';
 import 'package:mon_restaurant/models/event.dart';
 import 'package:mon_restaurant/pages/home_page.dart';
 import 'package:mon_restaurant/pages/next_page.dart';
@@ -30,9 +30,9 @@ Color pinkColor = const Color.fromRGBO(255, 182, 193, 1);
 
 // gestion des liens du menu appbar
 List<ButtonObject> menuButton = [
-  ButtonObject(text: "Ma Cuisine", destination: HomePage()),
-  ButtonObject(text: "Mes recettes", destination: NextPage()),
-  ButtonObject(text: "Blog", destination: NextPage()),
+  ButtonObject(text: "Ma Cuisine", destination: const HomePage()),
+  ButtonObject(text: "Mes recettes", destination: const NextPage()),
+  ButtonObject(text: "Blog", destination: const NextPage()),
 ];
 
 List<HoverButton> menuButtonHover() =>
@@ -47,4 +47,41 @@ List<Event> events = [
 String aboutMe =
     "Ne vous fiez pas aux apparences, sous son air sauvage, le codeur est un fin gourmet. \n Avec ses doigts agiles il saura vous préparer des logiciels succulents.";
 
+List<ButtonObject> containerButton = [
+  ButtonObject(
+      text: "Téléphone",
+      icon: const Icon(Icons.phone),
+      destination: const NextPage()),
+  ButtonObject(
+      text: "Mail",
+      icon: const Icon(Icons.mail),
+      destination: const NextPage()),
+  ButtonObject(
+      text: "Visio",
+      icon: const Icon(Icons.person),
+      destination: const NextPage()),
+];
 
+List<HoverButton> getCardHoverButtons() =>
+    containerButton.map((hbtn) => HoverButton(buttonObject: hbtn)).toList();
+
+List<FloatingActionButton> getFloatingButton(BuildContext context) =>
+    containerButton
+        .map(
+          (btn) => FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return btn.destination;
+                  },
+                ),
+              );
+            },
+            backgroundColor: pinkColor,
+            heroTag: btn.text,
+            child: btn.icon,
+          ),
+        )
+        .toList();

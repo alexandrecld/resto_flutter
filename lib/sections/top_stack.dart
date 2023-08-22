@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mon_restaurant/widgets/container_button.dart';
 import 'package:mon_restaurant/widgets/container_text_image.dart';
 
 class TopStack extends StatelessWidget {
@@ -9,6 +10,7 @@ class TopStack extends StatelessWidget {
     return const Stack(
       children: [
         ContainerTextImage(),
+        ContainerButton(),
       ],
     );
   }
