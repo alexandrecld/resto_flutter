@@ -7,6 +7,7 @@ import 'package:mon_restaurant/pages/next_page.dart';
 import 'package:mon_restaurant/widgets/hover_button.dart';
 import 'package:mon_restaurant/widgets/url_button.dart';
 import 'models/button_object.dart';
+import 'models/carousel_image.dart';
 
 String birthdayImage = "images/bday.jpg";
 String brownieImage = "images/brownie.jpg";
@@ -96,3 +97,14 @@ List<UrlClass> networks = [
 
 List<UrlButton> getSocialButtons() =>
     networks.map((net) => UrlButton(urlClass: net)).toList();
+
+// gesiton des images du carousel
+List<CarouselImage> images = [
+  CarouselImage(name: "Brownie", path: brownieImage),
+  CarouselImage(name: "Cheesecake", path: cheesecakeImage),
+  CarouselImage(name: "Choco", path: chocoImage),
+  CarouselImage(name: "Cupcake", path: cupcakeImage),
+  CarouselImage(name: "Donuts", path: donutsImage),
+  CarouselImage(name: "Tiramisu", path: tiramisuImage),
+  CarouselImage(name: "Wedding Cake", path: weddingImage),
+];

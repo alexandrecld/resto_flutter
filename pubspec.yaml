@@ -40,6 +40,9 @@ dependencies:
   #package url_launcher
   url_launcher: ^6.1.10
 
+  #package Carousel
+  carousel_slider: ^4.2.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

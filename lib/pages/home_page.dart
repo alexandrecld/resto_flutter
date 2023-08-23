@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mon_restaurant/models/make_it_responsive.dart';
 import 'package:mon_restaurant/sections/about_me_section.dart';
+import 'package:mon_restaurant/sections/carousel_section.dart';
 import 'package:mon_restaurant/sections/contact_section.dart';
 import 'package:mon_restaurant/sections/event_section.dart';
 import 'package:mon_restaurant/sections/top_stack.dart';
@@ -25,13 +26,14 @@ class _HomePageState extends State<HomePage> {
       appBar:
           (screenSize == ScreenSize.small) ? PhoneBar() : WebBar(size: size),
       drawer: const DrawerSmall(),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            TopStack(),
-            EventSection(),
-            AboutMe(),
-            ContactSection(),
+            const TopStack(),
+            const EventSection(),
+            const AboutMe(),
+            CarouselSection(depIndex: 3),
+            const ContactSection(),
           ],
         ),
       ),
