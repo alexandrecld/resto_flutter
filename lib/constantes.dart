@@ -8,6 +8,7 @@ import 'package:mon_restaurant/widgets/hover_button.dart';
 import 'package:mon_restaurant/widgets/url_button.dart';
 import 'models/button_object.dart';
 import 'models/carousel_image.dart';
+import 'models/review.dart';
 
 String birthdayImage = "images/bday.jpg";
 String brownieImage = "images/brownie.jpg";
@@ -23,7 +24,7 @@ String athenaImage = "images/athena.jpeg";
 String pleaseImage = "images/please.jpg";
 String flowerImage = "images/flowers.jpg";
 String lecheImage = "images/leche.jpg";
-String babineImage = "images/babine.jpg";
+String babineImage = "images/babines.jpg";
 String dogImage = "images/dog.jpg";
 String grumpyImage = "images/grumpy.png";
 String mouthImage = "images/mouth.jpg";
@@ -108,3 +109,36 @@ List<CarouselImage> images = [
   CarouselImage(name: "Tiramisu", path: tiramisuImage),
   CarouselImage(name: "Wedding Cake", path: weddingImage),
 ];
+
+// nos reviews
+Review archi = Review(
+  name: "Archibald",
+  image: athenaImage,
+  comment:
+      "J'ai adoré le gâteau de mon anniversaire, il était trop bon, merci maman !",
+);
+Review moustache = Review(
+  name: "Moustache",
+  image: pleaseImage,
+  comment: "J'ai adoré le gâteau de mon anniversaire, il était trop bon !",
+);
+Review flower = Review(
+  name: "Flower",
+  image: flowerImage,
+  comment: "J'ai adoré le gâteau de mon anniversaire, il était trop bon !",
+);
+Review leche = Review(
+  name: "Leche",
+  image: lecheImage,
+  comment: "J'ai adoré le gâteau de mon anniversaire, il était trop bon !",
+);
+Review gourmand = Review(
+  name: "Gourmand",
+  image: babineImage,
+  comment: "J'ai adoré le gâteau de mon anniversaire, il était trop bon !",
+);
+Review dog = Review(
+  name: "Medor",
+  image: dogImage,
+  comment: "J'ai adoré le gâteau de mon anniversaire, il était trop bon !",
+);

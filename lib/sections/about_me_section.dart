@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constantes.dart';
 import '../widgets/title_text.dart';
 
@@ -11,7 +10,7 @@ class AboutMe extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.all(30),
+      padding: const EdgeInsets.all(30),
       width: size.width,
       color: pinkColor,
       child: Column(

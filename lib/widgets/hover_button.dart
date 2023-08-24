@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import '../models/button_object.dart';
 
 class HoverButton extends StatefulWidget {
-  ButtonObject buttonObject;
+  final ButtonObject buttonObject;
 
-  HoverButton({super.key, required this.buttonObject});
+  const HoverButton({super.key, required this.buttonObject});
 
   @override
   State<HoverButton> createState() => _HoverButtonState();

@@ -6,9 +6,9 @@ import '../constantes.dart';
 import '../models/carousel_image.dart';
 
 class CarouselSection extends StatefulWidget {
-  int depIndex;
+  final int depIndex;
 
-  CarouselSection({required this.depIndex, super.key});
+  const CarouselSection({required this.depIndex, super.key});
 
   @override
   State<CarouselSection> createState() => _CarouselSectionState();

@@ -3,7 +3,7 @@ import 'package:mon_restaurant/constantes.dart';
 import 'package:mon_restaurant/widgets/branding.dart';
 
 class WebBar extends PreferredSize {
-  Size size;
+  final Size size;
 
   WebBar({super.key, required this.size})
       : super(

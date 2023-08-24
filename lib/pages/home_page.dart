@@ -4,6 +4,7 @@ import 'package:mon_restaurant/sections/about_me_section.dart';
 import 'package:mon_restaurant/sections/carousel_section.dart';
 import 'package:mon_restaurant/sections/contact_section.dart';
 import 'package:mon_restaurant/sections/event_section.dart';
+import 'package:mon_restaurant/sections/review_section.dart';
 import 'package:mon_restaurant/sections/top_stack.dart';
 import 'package:mon_restaurant/widgets/drawer_small.dart';
 import 'package:mon_restaurant/widgets/phone_bar.dart';
@@ -26,14 +27,15 @@ class _HomePageState extends State<HomePage> {
       appBar:
           (screenSize == ScreenSize.small) ? PhoneBar() : WebBar(size: size),
       drawer: const DrawerSmall(),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           children: [
-            const TopStack(),
-            const EventSection(),
-            const AboutMe(),
+            TopStack(),
+            EventSection(),
+            AboutMe(),
             CarouselSection(depIndex: 3),
-            const ContactSection(),
+            ReviewSection(),
+            ContactSection(),
           ],
         ),
       ),
