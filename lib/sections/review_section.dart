@@ -30,7 +30,7 @@ class _ReviewSectionState extends State<ReviewSection> {
         children: [
           Row(
             children: [
-              TitleText(label: "ils ont aimé...", fSize: 30),
+              TitleText(label: "ils ont aimés ...", fSize: 30),
               Expanded(child: Container())
             ],
           ),

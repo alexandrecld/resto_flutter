@@ -43,6 +43,9 @@ dependencies:
   #package Carousel
   carousel_slider: ^4.2.1
 
+  #package crypto
+  crypto: ^3.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,8 +1,12 @@
 // définir les alias d'images
+import 'dart:convert';
+
+import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:mon_restaurant/models/event.dart';
 import 'package:mon_restaurant/models/url_class.dart';
 import 'package:mon_restaurant/pages/home_page.dart';
+import 'package:mon_restaurant/pages/login_page.dart';
 import 'package:mon_restaurant/pages/next_page.dart';
 import 'package:mon_restaurant/widgets/hover_button.dart';
 import 'package:mon_restaurant/widgets/url_button.dart';
@@ -65,6 +69,10 @@ List<ButtonObject> containerButton = [
       text: "Visio",
       icon: const Icon(Icons.person),
       destination: const NextPage()),
+  ButtonObject(
+      text: "Login",
+      icon: const Icon(Icons.login),
+      destination: const LoginPage()),
 ];
 
 List<HoverButton> getCardHoverButtons() =>
@@ -142,3 +150,9 @@ Review dog = Review(
   image: dogImage,
   comment: "J'ai adoré le gâteau de mon anniversaire, il était trop bon !",
 );
+
+String adminLog = "admin";
+String adminPass = generateMd5("admin@2023");
+String generateMd5(String data) {
+  return md5.convert(utf8.encode(data)).toString();
+}
