@@ -45,11 +45,12 @@ List<HoverButton> menuButtonHover() =>
 List<Event> events = [
   Event(name: "Mariage", path: weddingImage),
   Event(name: "Anniversaire", path: birthdayImage),
-  Event(name: "Autre", path: cupcakeImage),
+  Event(name: "Autres", path: cupcakeImage),
 ];
 
 String aboutMe =
-    "Ne vous fiez pas aux apparences, sous son air sauvage, le codeur est un fin gourmet. \n Avec ses doigts agiles il saura vous préparer des logiciels succulents.";
+    "Ne vous fiez pas aux apparences, sous son air sauvage, le codeur est un fin gourmet."
+    "\n Avec ses doigts agiles il saura vous préparer des logiciels succulents.";
 
 List<ButtonObject> containerButton = [
   ButtonObject(
@@ -114,8 +115,7 @@ List<CarouselImage> images = [
 Review archi = Review(
   name: "Archibald",
   image: athenaImage,
-  comment:
-      "J'ai adoré le gâteau de mon anniversaire, il était trop bon, merci maman !",
+  comment: "J'ai adoré le gâteau de mon anniversaire, il était trop bon !",
 );
 Review moustache = Review(
   name: "Moustache",
